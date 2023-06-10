@@ -9,7 +9,7 @@ export function App() {
 
   return (
     <>
-      < Deshboard />
+      <Deshboard />
       <People />
       <Planets />
       <Ships />
