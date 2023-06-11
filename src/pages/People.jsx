@@ -1,5 +1,10 @@
+import { PeopleList } from "../components/PeopleList"
+
 export function People() {
+
+
     return (
-        <h2>People</h2>
+
+        <PeopleList />
     )
 }
