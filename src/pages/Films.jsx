@@ -1,5 +1,10 @@
+import { FilmsList } from "../components/films/FilmsList";
+
+
 export function Films() {
     return (
-        <h2>Films</h2>
+        <section>
+            <FilmsList />
+        </section>
     )
 }

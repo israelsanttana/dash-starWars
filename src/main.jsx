@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Deshboard } from "./pages/Deshboard";
 import { People } from "./pages/People";
 import { Planets } from "./pages/Planets";
-import { Ships } from "./pages/Ships";
+import { Starships } from "./pages/Starships";
 import { Films } from "./pages/Films"
 
 
@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={<Deshboard />} />
         <Route path='/peoole' element={<People />} />
         <Route path='/planets' element={<Planets />} />
-        <Route path='/ships' element={<Ships />} />
+        <Route path='/starships' element={<Starships />} />
         <Route path='/films' element={< Films />} />
       </Routes>
 
