@@ -1,10 +1,14 @@
-import { PeopleList } from "../components/PeopleList"
+import { PeopleList } from "../components/people/PeopleList"
 
 export function People() {
 
 
     return (
 
-        <PeopleList />
+        <section>
+
+            <PeopleList />
+
+        </section>
     )
 }
