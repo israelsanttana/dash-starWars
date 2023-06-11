@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import styles from "./planets.module.css"
 
 export function PlanetsList() {
 
@@ -36,8 +37,13 @@ export function PlanetsList() {
                 <div>
                     {planetData.results.map((planet) => (
                         <div
-                            key={planet.name}>
-                            <h2> Planet: {planet.name} </h2>
+                            key={planet.name} className={styles.card}>
+                            <h2> Planet: {planet.name}</h2>
+                            <h3>Climate: {planet.climate}</h3>
+                            <h3>Gravity: {planet.gravity}</h3>
+                            <h3>terrain: {planet.terrain}</h3>
+                            <h3>Population: {planet.population}</h3>
+                            <h3>Diameter: {planet.diameter} </h3>
                         </div>
                     ))
                     }
