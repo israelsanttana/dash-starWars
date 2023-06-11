@@ -34,6 +34,14 @@ export function StarshipsList() {
                     {starshipListData.results.map((model) => (
                         <div className={styles.card} key={model.name}>
                             <h2>Model: {model.model} </h2>
+                            <h3>Manufacturer: {model.manufacturer} </h3>
+                            <h3>
+                                Max atmosphering speed:
+                                {model.max_atmosphering_speed}
+                            </h3>
+                            <h3>Cost in credits: {model.cost_in_credits} </h3>
+                            <h3>Passengers: {model.passengers} </h3>
+                            <h3>Hyperdrive rating: {model.hyperdrive_rating} </h3>
 
                         </div>
                     ))}
