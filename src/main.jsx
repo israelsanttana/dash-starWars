@@ -6,12 +6,14 @@ import { People } from "./pages/People";
 import { Planets } from "./pages/Planets";
 import { Starships } from "./pages/Starships";
 import { Films } from "./pages/Films"
+import { Nav } from './components/nav/Nav';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
     <BrowserRouter>
+      <Nav />
 
       <Routes>
         <Route path='/' element={<Deshboard />} />
