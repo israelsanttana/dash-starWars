@@ -25,6 +25,7 @@ export function PeopleList() {
 
     };
 
+
     useEffect(() => {
         getPeople();
 
@@ -40,12 +41,15 @@ export function PeopleList() {
                         <div className={styles.card}
                             key={person.name}
                         >
-                            <h2>Nome: {person.name}</h2>
-                            <h3>Altura: {person.height}cm</h3>
-                            <h3>Peso: {person.mass} kg</h3>
-                            <h3>Gênero: {person.gender}</h3>
-                            <h3>Planeta natal: </h3>
-                            <h3>Filmes: </h3>
+                            <h2>Name: {person.name}</h2>
+                            <h3>Height: {person.height}cm</h3>
+                            <h3>Mass: {person.mass} kg</h3>
+                            <h3>Gender: {person.gender}</h3>
+                            <h3>Homeworld: {person.homeworld}</h3>
+                            <h3>Birth year:{person.birth_year} </h3>
+                            <h3>Films: {person.films}</h3>
+                            <h3>Vehicles: {person.vehicles} </h3>
+                            <h3>Starships: {person.starships} </h3>
                         </div>
                     ))}
                 </div>

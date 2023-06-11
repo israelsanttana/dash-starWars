@@ -1,5 +1,9 @@
+import { PlanetsList } from "../components/planets/PlanetsList";
+
 export function Planets() {
     return (
-        <h2>Planets</h2>
+        <section>
+            <PlanetsList />
+        </section>
     )
 }
