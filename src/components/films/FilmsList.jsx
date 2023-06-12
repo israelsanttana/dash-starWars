@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import styles from "./films.module.css"
 import axios from "axios"
 
+
 export function FilmsList() {
 
     const [filmsListData, setFilmsListData] = useState(null);
@@ -34,8 +35,8 @@ export function FilmsList() {
     return (
         <>
 
-            {!filmsListData ? <p>Carregando...</p> : (
-                <div>
+            {!filmsListData ? <div className="loader"></div> : (
+                <div className={styles.content}>
                     {filmsListData.results.map((films) => (
                         <div className={styles.card} key={films.title}>
                             <h2> {films.title} </h2>

@@ -35,7 +35,7 @@ export function PeopleList() {
     return (
         <>
 
-            {!peopleData ? <p>Carregando...</p> : (
+            {!peopleData ? <div className="loader"></div> : (
                 <div className={styles.cardName}>
                     {peopleData.results.map((person) => (
                         <div className={styles.card}

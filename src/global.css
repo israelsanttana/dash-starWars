@@ -3,3 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+nav a.active {
+    color: yellow;
+}
+
+.loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    background-image: url(./assets/loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+}
+

@@ -33,7 +33,7 @@ export function PlanetsList() {
 
     return (
         <>
-            {!planetData ? <p>Cerregando...</p> : (
+            {!planetData ? <div className="loader"></div> : (
                 <div>
                     {planetData.results.map((planet) => (
                         <div

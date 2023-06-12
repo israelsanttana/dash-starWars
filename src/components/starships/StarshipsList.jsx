@@ -29,7 +29,7 @@ export function StarshipsList() {
 
     return (
         <>
-            {!starshipListData ? <p>Carregando...</p> : (
+            {!starshipListData ? <div className="loader"></div> : (
                 <div>
                     {starshipListData.results.map((model) => (
                         <div className={styles.card} key={model.name}>

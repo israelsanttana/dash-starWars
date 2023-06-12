@@ -1,7 +1,25 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sidebar ul {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 20px;
+    gap: 3rem;
     
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.sidebar a:hover {
+    color: yellow;
 }
