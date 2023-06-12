@@ -1,6 +1,7 @@
-.sidebar {
-    
-    width: 300px;
-    background-color: #333;
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
     
 }

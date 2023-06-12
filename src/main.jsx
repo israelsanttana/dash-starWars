@@ -7,6 +7,7 @@ import { Planets } from "./pages/Planets";
 import { Starships } from "./pages/Starships";
 import { Films } from "./pages/Films"
 import { Layout } from './components/layout/Layout';
+import "./global.css"
 
 
 

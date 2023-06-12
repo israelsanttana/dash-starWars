@@ -1,3 +1,18 @@
 .layout {
-    display: flex;
+display: grid;
+grid-template-columns: 260px 1fr ;
+grid-template-areas: "sidebar main-content "; 
+grid-gap: 10px; 
+}
+.sidebar {
+    grid-area: sidebar; 
+    position: fixed;
+
+}
+
+
+.children {
+    grid-area: main-content; 
+    
+    
 }
