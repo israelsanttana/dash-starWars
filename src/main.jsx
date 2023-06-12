@@ -6,22 +6,24 @@ import { People } from "./pages/People";
 import { Planets } from "./pages/Planets";
 import { Starships } from "./pages/Starships";
 import { Films } from "./pages/Films"
-import { Nav } from './components/nav/Nav';
+import { Layout } from './components/layout/Layout';
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
     <BrowserRouter>
-      <Nav />
 
-      <Routes>
-        <Route path='/' element={<Deshboard />} />
-        <Route path='/peoole' element={<People />} />
-        <Route path='/planets' element={<Planets />} />
-        <Route path='/starships' element={<Starships />} />
-        <Route path='/films' element={< Films />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Deshboard />} />
+          <Route path='/peoole' element={<People />} />
+          <Route path='/planets' element={<Planets />} />
+          <Route path='/starships' element={<Starships />} />
+          <Route path='/films' element={< Films />} />
+        </Routes>
+      </Layout>
 
     </BrowserRouter>
 
