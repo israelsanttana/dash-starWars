@@ -29,8 +29,6 @@ nav a.active {
     background-image: url(./assets/loader.gif);
     background-repeat: no-repeat;
     background-position: center;
-    
-    
 }
 
 .container {
@@ -38,6 +36,13 @@ nav a.active {
     margin: 2rem auto;
     padding: 0 2rem;
 }
+
+.card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem
+}
+
 
 .controller {
     display: flex;
@@ -59,7 +64,6 @@ nav a.active {
     font-size: 1rem;
     outline: none;
     border: solid 1px black
- 
     
 }
 
@@ -98,8 +102,3 @@ nav a.active {
     cursor: pointer;
 }
 
-.card_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem
- }

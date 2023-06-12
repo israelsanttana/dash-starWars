@@ -60,9 +60,9 @@ export function PeopleList() {
     return (
         <section className={styles.people_container}>
             <div className="container">
-                <div className={styles.controller}>
+                <div className="controller">
 
-                    <div className={styles.filter}>
+                    <div className="filter">
                         <form onSubmit={handleFilter}>
                             <input
                                 type="text"
@@ -74,7 +74,7 @@ export function PeopleList() {
                         </form>
                     </div>
 
-                    <div className={styles.pagination}>
+                    <div className="pagination">
                         <button onClick={handlePreviousPage} disabled={currentPage === 1}>
                             Previous
                         </button>
@@ -91,7 +91,7 @@ export function PeopleList() {
 
             {isLoader && (<div className="loader"></div>)}
             {peopleData && (<div className="container">
-                <div className={styles.card_container}>
+                <div className="card_container">
                     {peopleData.map((person) => (
                         <div className={styles.card} key={person.name}>
                             <h2>Name: {person.name}</h2>
