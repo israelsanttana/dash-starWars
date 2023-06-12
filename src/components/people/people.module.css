@@ -1,6 +1,41 @@
-
 .card {
     border: solid 1px #333;
     padding: 10px;
+    margin: 10px;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter input{
+    height: 2rem;
+    width: 300px;
+    padding: 20px;
+    font-size: 1rem;
+    outline: none;
+    
+}
+
+.filter button {
+    border: solid 1px black;
+    width: 100px;
+    padding: 14px;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    border: solid 1px black;
+    width: 100px;
+    padding: 14px;
+    text-align: center;
     margin: 10px;
 }
