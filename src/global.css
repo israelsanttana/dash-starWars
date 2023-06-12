@@ -38,3 +38,68 @@ nav a.active {
     margin: 2rem auto;
     padding: 0 2rem;
 }
+
+.controller {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 4px;
+}
+
+.filter input{
+    height: 2rem;
+    width: 300px;
+    padding: 20px;
+    font-size: 1rem;
+    outline: none;
+    border: solid 1px black
+ 
+    
+}
+
+.filter button {
+    width: 100px;
+    padding: 13px;
+    text-align: center;
+    background: transparent;
+    border: solid 1px black;
+    transition: 0.3s;
+}
+
+.filter button:hover {
+    background-color: var(--standard-color);
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    width: 100px;
+    padding: 13px;
+    text-align: center;
+    background: transparent;
+    border: solid 1px black;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.pagination button:hover {
+    background-color: var(--standard-color);
+    cursor: pointer;
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem
+ }

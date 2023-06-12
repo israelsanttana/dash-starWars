@@ -17,7 +17,7 @@
     gap: 1rem;
 }
 
-.filter {
+.filter form {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,8 +7,10 @@ export function PeopleList() {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
+    const [isLoader, setisLoader] = useState(false)
 
     const getPeople = async () => {
+        setisLoader(true)
         try {
             const res = await axios.get(
                 `https://swapi.dev/api/people/?page=${currentPage}&search=${searchQuery}`
@@ -16,9 +18,11 @@ export function PeopleList() {
             const data = res.data;
             setPeopleData(data.results);
             setTotalPages(Math.ceil(data.count / 10));
+            setisLoader(false)
         } catch (error) {
             console.log(error);
         }
+
     };
 
     const handlePreviousPage = () => {
@@ -33,14 +37,25 @@ export function PeopleList() {
         }
     };
 
-    const handleFilter = () => {
+    const handleFilter = (e) => {
+        e.preventDefault();
         setCurrentPage(1);
         getPeople();
+
     };
 
     useEffect(() => {
         getPeople();
-    }, [currentPage, searchQuery]);
+    }, [currentPage]);
+
+    const clearInput = (e) => {
+        setSearchQuery(e.target.value)
+        if (e.target.value === "") {
+            getPeople();
+
+        }
+    };
+
 
     return (
         <section className={styles.people_container}>
@@ -48,13 +63,15 @@ export function PeopleList() {
                 <div className={styles.controller}>
 
                     <div className={styles.filter}>
-                        <input
-                            type="text"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search..."
-                        />
-                        <button onClick={handleFilter}>Filter</button>
+                        <form onSubmit={handleFilter}>
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                onChange={clearInput}
+                                placeholder="Search..."
+                            />
+                            <button>Filter</button>
+                        </form>
                     </div>
 
                     <div className={styles.pagination}>
@@ -72,27 +89,20 @@ export function PeopleList() {
                 </div>
             </div>
 
-            {!peopleData ? (
-                <div className="loader"></div>
-            ) : (
-                <div className="container">
-                    <div className={styles.card_container}>
-                        {peopleData.map((person) => (
-                            <div className={styles.card} key={person.name}>
-                                <h2>Name: {person.name}</h2>
-                                <h3>Height: {person.height}cm</h3>
-                                <h3>Mass: {person.mass} kg</h3>
-                                <h3>Gender: {person.gender}</h3>
-                                <h3>Birth year: {person.birth_year}</h3>
-                                {/* <h3>Homeworld: {person.homeworld}</h3>
-                            <h3>Films: {person.films}</h3> */}
-                            </div>
-                        ))}
-                    </div>
+            {isLoader && (<div className="loader"></div>)}
+            {peopleData && (<div className="container">
+                <div className={styles.card_container}>
+                    {peopleData.map((person) => (
+                        <div className={styles.card} key={person.name}>
+                            <h2>Name: {person.name}</h2>
+                            <h3>Height: {person.height}cm</h3>
+                            <h3>Mass: {person.mass} kg</h3>
+                            <h3>Gender: {person.gender}</h3>
+                            <h3>Birth year: {person.birth_year}</h3>
+                        </div>
+                    ))}
                 </div>
-            )}
-
-
+            </div>)}
         </section>
     );
 }
