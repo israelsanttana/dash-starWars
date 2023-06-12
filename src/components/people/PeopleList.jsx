@@ -44,45 +44,55 @@ export function PeopleList() {
 
     return (
         <section className={styles.people_container}>
-            <div className={styles.filter}>
-                <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search..."
-                />
-                <button onClick={handleFilter}>Filter</button>
+            <div className="container">
+                <div className={styles.controller}>
+
+                    <div className={styles.filter}>
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Search..."
+                        />
+                        <button onClick={handleFilter}>Filter</button>
+                    </div>
+
+                    <div className={styles.pagination}>
+                        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+                            Previous
+                        </button>
+                        <span>
+                            Page {currentPage} of {totalPages}
+                        </span>
+                        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+                            Next
+                        </button>
+                    </div>
+
+                </div>
             </div>
 
             {!peopleData ? (
                 <div className="loader"></div>
             ) : (
-                <div className={styles.cardName}>
-                    {peopleData.map((person) => (
-                        <div className={styles.card} key={person.name}>
-                            <h2>Name: {person.name}</h2>
-                            <h3>Height: {person.height}cm</h3>
-                            <h3>Mass: {person.mass} kg</h3>
-                            <h3>Gender: {person.gender}</h3>
-                            <h3>Birth year: {person.birth_year}</h3>
-                            <h3>Homeworld: {person.homeworld}</h3>
-                            <h3>Films: {person.films}</h3>
-                        </div>
-                    ))}
+                <div className="container">
+                    <div className={styles.card_container}>
+                        {peopleData.map((person) => (
+                            <div className={styles.card} key={person.name}>
+                                <h2>Name: {person.name}</h2>
+                                <h3>Height: {person.height}cm</h3>
+                                <h3>Mass: {person.mass} kg</h3>
+                                <h3>Gender: {person.gender}</h3>
+                                <h3>Birth year: {person.birth_year}</h3>
+                                {/* <h3>Homeworld: {person.homeworld}</h3>
+                            <h3>Films: {person.films}</h3> */}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
 
-            <div className={styles.pagination}>
-                <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-                    Previous
-                </button>
-                <span>
-                    Page {currentPage} of {totalPages}
-                </span>
-                <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-                    Next
-                </button>
-            </div>
+
         </section>
     );
 }

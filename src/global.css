@@ -1,11 +1,23 @@
+:root {
+    --standard-color: #DBA90E;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: Lato;
+
+}
+
+
 nav a.active {
-    color: yellow;
+    color: var(--standard-color);
+    border: solid 1px var(--standard-color);
+    padding: 6px;
 }
 
 .loader {
@@ -21,3 +33,8 @@ nav a.active {
     
 }
 
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}

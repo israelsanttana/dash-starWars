@@ -1,13 +1,28 @@
+.controller {
+    display: flex;
+    justify-content: space-between;
+}
+.card_container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 1rem
+}
+
 .card {
     border: solid 1px #333;
-    padding: 10px;
-    margin: 10px;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .filter {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem 0;
+    gap: 4px;
 }
 
 .filter input{
@@ -16,14 +31,23 @@
     padding: 20px;
     font-size: 1rem;
     outline: none;
+    border: solid 1px black
+ 
     
 }
 
 .filter button {
-    border: solid 1px black;
     width: 100px;
-    padding: 14px;
+    padding: 13px;
     text-align: center;
+    background: transparent;
+    border: solid 1px black;
+    transition: 0.3s;
+}
+
+.filter button:hover {
+    background-color: var(--standard-color);
+    cursor: pointer;
 }
 
 .pagination {
@@ -33,9 +57,16 @@
 }
 
 .pagination button {
-    border: solid 1px black;
     width: 100px;
-    padding: 14px;
+    padding: 13px;
     text-align: center;
+    background: transparent;
+    border: solid 1px black;
+    transition: 0.3s;
     margin: 10px;
+}
+
+.pagination button:hover {
+    background-color: var(--standard-color);
+    cursor: pointer;
 }
