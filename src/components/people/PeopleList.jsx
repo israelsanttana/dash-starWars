@@ -15,7 +15,7 @@ export function PeopleList() {
             );
             const data = res.data;
             setPeopleData(data.results);
-            setTotalPages(Math.ceil(data.count / 10)); // Assuming 10 results per page
+            setTotalPages(Math.ceil(data.count / 10));
         } catch (error) {
             console.log(error);
         }

@@ -14,20 +14,20 @@ export function Nav() {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/">Deshboard</NavLink>
+                        <NavLink to="/">Dashboard</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/peoole">Characters </NavLink>
+                        <NavLink to="/peoole">Employees </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/films">Films</NavLink>
+                        <NavLink to="/films">Projects</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/planets">Planets</NavLink>
+                        <NavLink to="/planets"> Offices</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/starships">Starships</NavLink>
+                        <NavLink to="/starships">Fleet</NavLink>
                     </li>
                 </ul>
             </nav>
