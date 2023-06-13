@@ -75,7 +75,7 @@ export function FilmsList() {
                                 onChange={clearInput}
                                 placeholder="Search..."
                             />
-                            <button>Filter</button>
+                            <button> Filter</button>
                         </form>
                     </div>
 

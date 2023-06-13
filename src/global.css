@@ -1,5 +1,6 @@
 :root {
     --standard-color: #DBA90E;
+    --yellow-100-color: #e9c65e;
 }
 
 *{
@@ -49,36 +50,46 @@ nav a.active {
     justify-content: space-between;
 }
 
+
+.filter{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10px;
+    background-color: var(--standard-color);
+
+}
+
+
 .filter form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
-    gap: 4px;
 }
 
 .filter input{
-    height: 2rem;
+    height: 3rem;
     width: 300px;
     padding: 20px;
     font-size: 1rem;
     outline: none;
-    border: solid 1px black
+    border-radius: 10px;
+    border: none;
     
 }
 
 .filter button {
-    width: 100px;
-    padding: 13px;
-    text-align: center;
+    height: 2rem;
+    width: 80px;
+    border-radius: 20px;
     background: transparent;
-    border: solid 1px black;
     transition: 0.3s;
+    border: none;
+    font-size: 1rem;
+    
 }
 
 .filter button:hover {
-    background-color: var(--standard-color);
     cursor: pointer;
+    color: #fff;
 }
 
 .pagination {
@@ -89,12 +100,15 @@ nav a.active {
 
 .pagination button {
     width: 100px;
-    padding: 13px;
+    height: 3rem;
+    font-size: 1rem;
     text-align: center;
     background: transparent;
-    border: solid 1px black;
+    border-radius: 10px;
     transition: 0.3s;
-    margin: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin: 0 20px;
 }
 
 .pagination button:hover {
