@@ -114,5 +114,6 @@ nav a.active {
 .pagination button:hover {
     background-color: var(--standard-color);
     cursor: pointer;
+    color: #fff;
 }
 
