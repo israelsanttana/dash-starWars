@@ -25,3 +25,10 @@
 .sidebar a:hover {
     color: var(--standard-color)
 }
+
+
+@media (max-width: 1140px) {
+    .sidebar {
+        display: none;
+    }
+}

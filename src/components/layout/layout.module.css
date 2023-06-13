@@ -16,3 +16,12 @@
 .children {
     grid-area: main-content; 
 }
+
+@media (max-width: 1140px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main-content";
+    }
+
+}

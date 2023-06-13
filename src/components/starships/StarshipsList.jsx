@@ -106,9 +106,9 @@ export function StarshipsList() {
                             <h3>Passengers: {model.passengers} </h3>
                             <h3>Hyperdrive rating: {model.hyperdrive_rating} </h3>
                         </div>
-                    ))};
+                    ))}
                 </div>
-            </div>)};
+            </div>)}
         </section>
     )
 }
