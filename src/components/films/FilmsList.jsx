@@ -8,7 +8,7 @@ export function FilmsList() {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
-    const [isLoader, setisLoader] = useState(false)
+    const [isLoader, setisLoader] = useState(false);
     const [filmsListData, setFilmsListData] = useState(null);
 
     const getFilms = async () => {
@@ -21,7 +21,7 @@ export function FilmsList() {
             const data = res.data;
             setFilmsListData(data);
             setTotalPages(Math.ceil(data.count / 10));
-            setisLoader(false)
+            setisLoader(false);
 
 
         } catch (error) {

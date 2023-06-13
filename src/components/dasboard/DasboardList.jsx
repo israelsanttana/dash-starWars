@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import styles from "./dashboardList.module.css"
+import styles from "./dashboardList.module.css";
+import iconDeathStar from "../../assets/death-Star.png";
+import iconR2d2 from "../../assets/r2d2.png";
+import iconStarship from "../../assets/starship.png";
+import iconStormtrooper from "../../assets/stormtrooper.png";
 
 export function DashboardList() {
     const [isLoading, setIsLoading] = useState(true);
@@ -46,17 +50,43 @@ export function DashboardList() {
         <div className="container">
             <div className={styles.dash_container}>
                 <div className={styles.employees}>
-                    <h2>Total de Pessoas: {peopleCount}</h2>
+                    <div className={styles.total_card}>
+                        <img src={iconStormtrooper} width={80} alt="" />
+                        <h2> Total employees: <span>{peopleCount}</span></h2>
+                    </div>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias asperiores fugiat quos dolores et facere amet dolor reprehenderit odio totam vitae, nisi nihil id quaerat omnis libero quam provident delectus?
+                    </h3>
 
                 </div>
                 <div className={styles.offices}>
-                    <h2>Total de Planetas: {planetsCount}</h2>
+                    <div className={styles.total_card}>
+                        <img src={iconDeathStar} width={80} alt="" />
+                        <h2> Total offices: <span>{planetsCount}</span></h2>
+
+                    </div>
+
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias asperiores fugiat quos dolores et facere amet dolor reprehenderit odio totam vitae, nisi nihil id quaerat omnis libero quam provident delectus?
+                    </h3>
                 </div>
                 <div className={styles.fleet}>
-                    <h2>Total de Starships: {starshipsCount}</h2>
+                    <div className={styles.total_card}>
+                        <img src={iconStarship} width={80} alt="" />
+                        <h2>Total fleet: <span>{starshipsCount}</span></h2>
+                    </div>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias asperiores fugiat quos dolores et facere amet dolor reprehenderit odio totam vitae, nisi nihil id quaerat omnis libero quam provident delectus?
+                    </h3>
                 </div>
                 <div className={styles.projects}>
-                    <h2>Total de Filmes: {filmsCount}</h2>
+                    <div className={styles.total_card}>
+                        <img src={iconR2d2} width={70} alt="" />
+                        <h2> Total projects: <span>{filmsCount}</span></h2>
+                    </div>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias asperiores fugiat quos dolores et facere amet dolor reprehenderit odio totam vitae, nisi nihil id quaerat omnis libero quam provident delectus?
+                    </h3>
                 </div>
             </div>
         </div>
