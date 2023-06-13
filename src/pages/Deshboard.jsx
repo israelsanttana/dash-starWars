@@ -1,6 +1,10 @@
+import { DashboardList } from "../components/dasboard/DasboardList";
 
 export function Deshboard() {
     return (
-        <h2>Deshboard</h2>
+        <section>
+            <DashboardList />
+
+        </section>
     )
 }

@@ -104,5 +104,6 @@ export function PeopleList() {
                 </div>
             </div>)}
         </section>
+
     );
 }
