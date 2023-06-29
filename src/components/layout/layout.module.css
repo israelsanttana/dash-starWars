@@ -1,18 +1,17 @@
-.layout {
+.layoutContent {
     display: grid;
-    grid-template-columns: 260px 1fr ;
-    grid-template-areas: "sidebar main-content mobile"; 
-    position: relative;
-
-
- 
+    grid-template-columns: 300px 1fr ;
+    grid-template-areas: "sidebar main-content"; 
+    overflow: hidden;
+    
 }
+
+
 .sidebar {
     grid-area: sidebar; 
     position: fixed;
    
 }
-
 
 
 .children {
@@ -21,11 +20,12 @@
 
 @media (max-width: 1140px) {
 
-    .layout {
+    .layoutContent{
         grid-template-columns: 1fr;
-        grid-template-areas: "sidebar main-content";
-        grid-template-columns: 60px 1fr ;
+        grid-template-areas: " main-content";
+        grid-template-rows: 2;
       
     }
+    
 
 }

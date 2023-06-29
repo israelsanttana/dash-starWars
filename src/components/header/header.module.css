@@ -1,0 +1,34 @@
+
+
+.content {
+    width: 100vw;
+    height: 4rem;
+    display: none;
+    background-color: black;
+}
+
+.contentButton {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.contentButton svg {
+    color: #fff;
+}
+
+.contentButton button {
+    background-color: transparent;
+    border: none;
+}
+
+@media (max-width: 1140px) {
+    .content {
+        display: block;
+    }
+  
+    
+}
