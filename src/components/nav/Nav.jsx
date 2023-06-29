@@ -6,31 +6,33 @@ import logo from "../../assets/logo.png"
 export function Nav() {
     return (
 
-        <div className={styles.sidebar}>
-            <div className={styles.logo}>
-                <img src={logo} width={160} />
+        <div className={styles.menu}>
+            <div className={styles.sidebar}>
+                <div className={styles.logo}>
+                    <img src={logo} width={120} />
 
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <NavLink to="/">Dashboard</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/peoole">Employees </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/films">Projects</NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink to="/planets"> Offices</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/starships">Fleet</NavLink>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/">Dashboard</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/peoole">Employees </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/films">Projects</NavLink>
-                    </li>
-
-                    <li>
-                        <NavLink to="/planets"> Offices</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/starships">Fleet</NavLink>
-                    </li>
-                </ul>
-            </nav>
         </div>
 
 

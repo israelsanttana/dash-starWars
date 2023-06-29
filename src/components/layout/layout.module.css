@@ -1,7 +1,9 @@
 .layout {
     display: grid;
     grid-template-columns: 260px 1fr ;
-    grid-template-areas: "sidebar main-content "; 
+    grid-template-areas: "sidebar main-content mobile"; 
+    position: relative;
+
 
  
 }
@@ -9,8 +11,8 @@
     grid-area: sidebar; 
     position: fixed;
    
-
 }
+
 
 
 .children {
@@ -21,7 +23,9 @@
 
     .layout {
         grid-template-columns: 1fr;
-        grid-template-areas: "main-content";
+        grid-template-areas: "sidebar main-content";
+        grid-template-columns: 60px 1fr ;
+      
     }
 
 }
