@@ -7,7 +7,7 @@
 }
 
 
-.sidebar {
+.nav {
     grid-area: sidebar; 
     position: fixed;
    
@@ -22,7 +22,7 @@
 
     .layoutContent{
         grid-template-columns: 1fr;
-        grid-template-areas: " main-content";
+        grid-template-areas: "main-content";
         grid-template-rows: 2;
       
     }

@@ -28,6 +28,7 @@
 @media (max-width: 1140px) {
     .content {
         display: block;
+        position: fixed;
     }
   
     

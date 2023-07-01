@@ -31,8 +31,9 @@
 
 @media (max-width: 1140px) {
   .sidebar {
-    display: none;
+    position: absolute;
+    top: 0;
   }
-
   
+
 }
