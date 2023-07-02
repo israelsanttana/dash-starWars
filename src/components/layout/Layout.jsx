@@ -7,10 +7,35 @@ export function Layout({ children }) {
 
     const [isNavOpen, setIsNavOpen] = useState(true);
 
+
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth <= 900) {
+                setIsNavOpen(false);
+            } else {
+                setIsNavOpen(true);
+            }
+        }
+
+        // Adicione um event listener para lidar com o redimensionamento da janela
+        window.addEventListener("resize", handleResize);
+
+        // Chame a função handleResize inicialmente
+        handleResize();
+
+        // Limpe o event listener quando o componente for desmontado
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+
     const toggleMenu = () => {
         setIsNavOpen(!isNavOpen)
 
+
     }
+
 
 
     return (
