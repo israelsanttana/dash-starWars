@@ -10,7 +10,7 @@ export function Layout({ children }) {
 
     useEffect(() => {
         function handleResize() {
-            if (window.innerWidth <= 900) {
+            if (window.innerWidth <= 1140) {
                 setIsNavOpen(false);
             } else {
                 setIsNavOpen(true);
