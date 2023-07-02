@@ -3,7 +3,10 @@ import styles from "./nav.module.css"
 import logo from "../../assets/logo.png"
 
 
-export function Nav() {
+
+export function Nav({ toggleMenu }) {
+
+
 
     return (
 
@@ -18,20 +21,20 @@ export function Nav() {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink to="/">Dashboard</NavLink>
+                            <NavLink onClick={toggleMenu} to="/">Dashboard</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/peoole">Employees </NavLink>
+                            <NavLink onClick={toggleMenu} to="/peoole">Employees </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/films">Projects</NavLink>
+                            <NavLink onClick={toggleMenu} to="/films">Projects</NavLink>
                         </li>
 
                         <li>
-                            <NavLink to="/planets"> Offices</NavLink>
+                            <NavLink onClick={toggleMenu} to="/planets"> Offices</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/starships">Fleet</NavLink>
+                            <NavLink onClick={toggleMenu} to="/starships">Fleet</NavLink>
                         </li>
                     </ul>
                 </nav>

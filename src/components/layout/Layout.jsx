@@ -49,6 +49,7 @@ export function Layout({ children }) {
             <div className={styles.layoutContent} >
                 <div className={styles.nav}>
                     {isNavOpen && <Nav
+                        toggleMenu={toggleMenu}
 
                     />}
                 </div>
