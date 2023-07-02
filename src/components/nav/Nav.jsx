@@ -4,9 +4,16 @@ import logo from "../../assets/logo.png"
 
 
 
-export function Nav({ toggleMenu }) {
+export function Nav({ setIsNavOpen }) {
 
+    const handleMenu = () => {
+        if (window.innerWidth <= 1140) {
+            setIsNavOpen(false);
+        } else {
+            setIsNavOpen(true);
+        }
 
+    };
 
     return (
 
@@ -21,20 +28,20 @@ export function Nav({ toggleMenu }) {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink onClick={toggleMenu} to="/">Dashboard</NavLink>
+                            <NavLink onClick={handleMenu} to="/">Dashboard</NavLink>
                         </li>
                         <li>
-                            <NavLink onClick={toggleMenu} to="/peoole">Employees </NavLink>
+                            <NavLink onClick={handleMenu} to="/peoole">Employees </NavLink>
                         </li>
                         <li>
-                            <NavLink onClick={toggleMenu} to="/films">Projects</NavLink>
+                            <NavLink onClick={handleMenu} to="/films">Projects</NavLink>
                         </li>
 
                         <li>
-                            <NavLink onClick={toggleMenu} to="/planets"> Offices</NavLink>
+                            <NavLink onClick={handleMenu} to="/planets"> Offices</NavLink>
                         </li>
                         <li>
-                            <NavLink onClick={toggleMenu} to="/starships">Fleet</NavLink>
+                            <NavLink onClick={handleMenu} to="/starships">Fleet</NavLink>
                         </li>
                     </ul>
                 </nav>

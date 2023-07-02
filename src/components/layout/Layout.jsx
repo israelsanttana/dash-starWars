@@ -17,6 +17,7 @@ export function Layout({ children }) {
             }
         }
 
+
         // Adicione um event listener para lidar com o redimensionamento da janela
         window.addEventListener("resize", handleResize);
 
@@ -43,13 +44,15 @@ export function Layout({ children }) {
             <div className={styles.header}>
                 <Header
                     toggleMenu={toggleMenu}
+                    isNavOpen={isNavOpen}
+
                 />
             </div>
 
             <div className={styles.layoutContent} >
                 <div className={styles.nav}>
                     {isNavOpen && <Nav
-                        toggleMenu={toggleMenu}
+                        setIsNavOpen={setIsNavOpen}
 
                     />}
                 </div>

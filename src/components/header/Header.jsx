@@ -1,14 +1,14 @@
 import styles from './header.module.css'
-import { List } from '@phosphor-icons/react'
+import { List, X } from '@phosphor-icons/react'
 
-export function Header({ toggleMenu }) {
-
+export function Header({ toggleMenu, isNavOpen }) {
 
     return (
 
         <div className={styles.content}>
             <div className={styles.contentButton}>
-                <button onClick={toggleMenu}  ><List size={32} /></button>
+                {isNavOpen ? <button onClick={toggleMenu}  ><X size={32} /></button> : <button onClick={toggleMenu}  ><List size={32} /></button>}
+
             </div>
 
         </div>
@@ -16,3 +16,4 @@ export function Header({ toggleMenu }) {
 
     )
 }
+
