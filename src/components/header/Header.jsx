@@ -1,6 +1,6 @@
 import styles from './header.module.css'
 import { List, X } from '@phosphor-icons/react'
-import iconStarWars from '../../assets/iconStarWars.png'
+import logo from '../../assets/logo.png'
 
 
 export function Header({ toggleMenu, isNavOpen }) {
@@ -11,7 +11,7 @@ export function Header({ toggleMenu, isNavOpen }) {
 
             <div className={styles.contentButton}>
                 <div>
-                    <img src={iconStarWars} width={70} />
+                    <img src={logo} width={70} />
                 </div>
 
                 {isNavOpen ? <button onClick={toggleMenu}  ><X size={32} /></button> : <button onClick={toggleMenu}  ><List size={32} /></button>}
