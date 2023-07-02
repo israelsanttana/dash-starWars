@@ -33,6 +33,7 @@
   .sidebar {
     position: absolute;
     top: 0;
+    box-shadow: 21px 30px 81px black;
   }
   
 
