@@ -17,8 +17,7 @@ body {
 
 nav a.active {
     color: var(--standard-color);
-    border: solid 1px var(--standard-color);
-    padding: 6px;
+    
 }
 
 .loader {
