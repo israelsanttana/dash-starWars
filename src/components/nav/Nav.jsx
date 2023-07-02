@@ -31,7 +31,7 @@ export function Nav({ setIsNavOpen }) {
                             <NavLink onClick={handleMenu} to="/">Dashboard</NavLink>
                         </li>
                         <li>
-                            <NavLink onClick={handleMenu} to="/peoole">Employees </NavLink>
+                            <NavLink onClick={handleMenu} to="/people">Employees </NavLink>
                         </li>
                         <li>
                             <NavLink onClick={handleMenu} to="/films">Projects</NavLink>
