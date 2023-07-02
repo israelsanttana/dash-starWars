@@ -54,6 +54,7 @@ export function FilmsList() {
         getFilms();
     }, [currentPage]);
 
+
     const clearInput = (e) => {
         setSearchQuery(e.target.value)
         if (e.target.value === "") {

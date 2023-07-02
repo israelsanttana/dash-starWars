@@ -14,7 +14,10 @@ export function Header({ toggleMenu, isNavOpen }) {
                     <img src={logo} width={70} />
                 </div>
 
-                {isNavOpen ? <button onClick={toggleMenu}  ><X size={32} /></button> : <button onClick={toggleMenu}  ><List size={32} /></button>}
+
+                <button onClick={toggleMenu}>
+                    {isNavOpen ? <X size={32} /> : <List size={32} />}
+                </button>
             </div>
 
 
