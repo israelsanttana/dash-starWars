@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Layout>
         <Routes>
           <Route path='/' element={<Deshboard />} />
-          <Route path='/peoole' element={<People />} />
+          <Route path='/people' element={<People />} />
           <Route path='/planets' element={<Planets />} />
           <Route path='/starships' element={<Starships />} />
           <Route path='/films' element={< Films />} />
